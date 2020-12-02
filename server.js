@@ -45,7 +45,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   console.log(res.locals.alerts);
-  res.redirect('/airquality');
+  res.render('index', { alerts: res.locals.alerts });
 });
 
 app.get('/profile', isLoggedIn, (req, res) => {
@@ -55,9 +55,6 @@ app.get('/profile', isLoggedIn, (req, res) => {
 app.use('/auth', require('./routes/auth'));
 
 app.use('/airquality', require('./routes/airquality'));
-
-app.use('/location', require('./routes/location'))
-
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {

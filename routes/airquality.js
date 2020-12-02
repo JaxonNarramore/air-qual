@@ -4,14 +4,58 @@ const airRouter = express.Router();
 const axios = require('axios');
 
 airRouter.get('/', (req, res) => {
-    axios.get(`https://api.weatherbit.io/v2.0/current/airquality?lat=30.267153&lon=-97.743057&key=${process.env.AIR_API_KEY}`)
+    res.render('index')
+})
+
+airRouter.get('/location', (req, res) => {
+    const citystate = req.query.location;
+    console.log(citystate);
+    axios.get(`https://api.weatherbit.io/v2.0/current/airquality?city=${citystate}&key=${process.env.AIR_API_KEY}`)
     .then((response) => {
         const air = response.data;
         console.log(air);
-        res.render('index', { air })
+        res.render('airquality', { query: air })
     }).catch((error) => {
             console.log(error);
          });
     });
 
+    
 module.exports = airRouter;
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // airRouter.post('/', (req, res) => {
+    //     axios.request(`https://www.googleapis.com/geolocation/v1/geolocate?key=${process.env.MAP_API_KEY}`)
+    //     .then((response) => {
+    //         const location = response.data;
+    //         console.log(location);
+    //         // res.render('location', { location })
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     });
+    // });
