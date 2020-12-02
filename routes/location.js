@@ -3,10 +3,12 @@ const db = require('../models');
 const locationRouter = require('express').Router();
 const axios = require('axios');
 
-locationRouter.get('/location', (req, res) => {
-    axios.get('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBmdUcBwyFSBNz9zQ_lPWdKhbSSVwskLuA')
+locationRouter.post('/', (req, res) => {
+    axios.get(`https://www.googleapis.com/geolocation/v1/geolocate?key=${process.env.MAP_API_KEY}`)
     .then((response) => {
-        console.log(response.data);
+        const location = response.data;
+        console.log(location);
+        res.render('location', { location })
     }).catch((error) => {
         console.log(error);
     });

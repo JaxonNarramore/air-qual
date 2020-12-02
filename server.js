@@ -45,7 +45,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   console.log(res.locals.alerts);
-  res.render('index', { alerts: res.locals.alerts });
+  res.redirect('/airquality');
 });
 
 app.get('/profile', isLoggedIn, (req, res) => {
