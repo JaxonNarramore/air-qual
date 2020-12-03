@@ -1,9 +1,59 @@
 nav ul li {
   text-decoration: none;
   display: inline-block;
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 
 h1 {
-  color: chartreuse;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 70px;
 }
+
+#location {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#locationinput {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* #auth-email {
+  display: block;
+  margin-top: 330px;
+} */
+
+/* #emaillabel {
+  position: absolute;
+  margin-left: 408px;
+  margin-top: 328px;
+} */
+
+/* #auth-password {
+  display: block;
+  margin: 0 auto;
+  margin-top: 350px;
+}
+
+#passwordinput {
+  display: block;
+  margin: 0 auto;
+}
+
+#passwordlabel {
+  position: absolute;
+  margin-left: 408px;
+  margin-top: 348px;
+} */
+
+/* #login {
+  margin-left: 400px;
+  margin-top: 350px;
+} */

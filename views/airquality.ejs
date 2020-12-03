@@ -1,5 +1,16 @@
+<h2>Air Quality Index: <%= query.data[0].aqi %> </h2>
 <h2>City: <%= query.city_name %> </h2>
-<h2>Air Quality Index: <%= query.data[0].aqi %></h2>
-<form action="/profile" method="GET">
+<h2>PM10: <%= query.data[0].pm10 %> µg/m3</h2>
+<h2>PM25: <%= query.data[0].pm25 %> µg/m3</h2>
+<h2>Carbon Monoxide: <%= query.data[0].co %> µg/m3</h2>
+<h2>Sulfur Dioxide: <%= query.data[0].so2 %> µg/m3</h2>
+<h2>Nitrogen Dioxide: <%= query.data[0].no2 %> µg/m3</h2>
+
+<form method="post" action="/profile">
+    <input type="hidden" value="<%= query.city_name %>" name="city_name">
+    <button type="submit">Add to your cities</button>
+</form>
+
+<form action="/" method="GET">
     <input type="submit" value="Back to search">
 </form>

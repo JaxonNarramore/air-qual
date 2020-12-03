@@ -54,7 +54,8 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 app.use('/auth', require('./routes/auth'));
 
-app.use('/airquality', require('./routes/airquality'));
+app.use('/', require('./routes/airquality'));
+
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
