@@ -6,12 +6,14 @@ const passport = require('./config/ppConfig');
 const flash = require('connect-flash');
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const app = express();
+const cookieSession = require('cookie-session');
 
 const isLoggedIn = require('./middleware/isLoggedIn')
 
 app.set('view engine', 'ejs');
 
 app.use(require('morgan')('dev'));
+app.use(cookieSession({ maxAge: 86400000, keys: [process.env.COOKIE_KEY] }))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);

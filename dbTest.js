@@ -7,7 +7,7 @@ const db = require("./models");
 // })
 
 // db.city.destroy({
-//     where: { name: 'Austin' }
+//     where: { name: 'Dallas' }
 // }).then(aus => {
 //     console.log(aus);
 // })

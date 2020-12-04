@@ -31,18 +31,29 @@ airRouter.post('/profile', (req, res) => {
     .then((response) => {
         // const air = response.data;
         console.log('unique', response);
-        console.log(req.user.id);
+        // console.log(req.user.id);
     db.city.create({
         name: city_name,
         state: state,
         userId: req.user.id
     }).then(() => {
-        res.redirect('/profile')
+        res.render('profile', { query: response.data })
         })
     }).catch((error) => {
         console.log(error);
     })
 })
+
+// airRouter.delete('/profile', (req, res) => {
+//     const { city_name } = req.body;
+//     db.cities.findOne({
+//         where: { city_name }
+//     }).then((foundCity) => {
+//         foundCity.destory().then(() => {
+//             res.redirect('/profile')
+//         })
+//     })
+// })
 
     
 module.exports = airRouter;

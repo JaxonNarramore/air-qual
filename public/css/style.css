@@ -33,35 +33,33 @@ h1 {
   margin-top: 10px;
 }
 
-/* #auth-email {
-  display: block;
-  margin-top: 330px;
-} */
-
-/* #emaillabel {
-  position: absolute;
-  margin-left: 408px;
-  margin-top: 328px;
-} */
-
-/* #auth-password {
-  display: block;
-  margin: 0 auto;
-  margin-top: 350px;
+/* #login {
+  display: grid;
+  grid-template-areas:
+    "text text text"
+    email;
 }
 
-#passwordinput {
-  display: block;
-  margin: 0 auto;
+#text {
+  grid-area: text;
+}
+
+#emaillabel {
+  grid-area: emaillabel;
+}
+
+#auth-email {
+  grid-area: auth-email;
 }
 
 #passwordlabel {
-  position: absolute;
-  margin-left: 408px;
-  margin-top: 348px;
-} */
+  grid-area: passwordlabel;
+}
 
-/* #login {
-  margin-left: 400px;
-  margin-top: 350px;
+#auth-password {
+  grid-area: auth-password;
+}
+
+#passwordinput {
+  grid-area: passwordinput;
 } */
