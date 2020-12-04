@@ -29,11 +29,13 @@ airRouter.post('/profile', (req, res) => {
     console.log(req.body.state_code);
     axios.get(`https://api.weatherbit.io/v2.0/current/airquality?city=${city_name},${state}&key=${process.env.AIR_API_KEY}`)
     .then((response) => {
-        const air = response.data;
+        // const air = response.data;
         console.log('unique', response);
+        console.log(req.user.id);
     db.city.create({
         name: city_name,
-        state: state
+        state: state,
+        userId: req.user.id
     }).then(() => {
         res.redirect('/profile')
         })

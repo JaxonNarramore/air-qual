@@ -4,5 +4,7 @@
 
 <form action="/profile" method=GET>
     <h1>Cities</h1>
-    <div><%= air.city_name %></div>
+    <% query.forEach(city => { %>
+        <%= city.city_name %> 
+   <% }) %> 
 </form>
