@@ -13,7 +13,14 @@ h1 {
 }
 
 #location {
-  width: 400px;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#state {
+  width: 250px;
   display: block;
   margin: 0 auto;
   margin-top: 10px;
@@ -23,6 +30,7 @@ h1 {
   width: 70px;
   display: block;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 /* #auth-email {

@@ -6,8 +6,9 @@
 <h2>Sulfur Dioxide: <%= query.data[0].so2 %> µg/m3</h2>
 <h2>Nitrogen Dioxide: <%= query.data[0].no2 %> µg/m3</h2>
 
-<form method="post" action="/profile">
+<form method="POST" action="/profile">
     <input type="hidden" value="<%= query.city_name %>" name="city_name">
+    <input type="hidden" value="<%= query.state_code %>" name="state_code">
     <button type="submit">Add to your cities</button>
 </form>
 
