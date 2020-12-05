@@ -33,33 +33,38 @@ h1 {
   margin-top: 10px;
 }
 
-/* #login {
-  display: grid;
-  grid-template-areas:
-    "text text text"
-    email;
+#login {
+  grid-column: 1 / 2;
 }
 
-#text {
-  grid-area: text;
+#login label {
+  display: block;
 }
 
-#emaillabel {
-  grid-area: emaillabel;
+.container1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-#auth-email {
-  grid-area: auth-email;
+.container {
+  display: block;
+  border: blue;
 }
 
-#passwordlabel {
-  grid-area: passwordlabel;
+#results {
+  text-align: center;
 }
 
-#auth-password {
-  grid-area: auth-password;
+#buttonz {
+  display: inline-flex;
+  justify-content: center;
 }
 
-#passwordinput {
-  grid-area: passwordinput;
-} */
+#signup {
+  grid-column: 1 / 3;
+}
+
+#signup label {
+  display: block;
+}

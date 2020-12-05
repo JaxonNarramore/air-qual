@@ -1,11 +1,12 @@
 <h2>Profile Page</h2>
 
 <h3>Welcome to your PROFILE</h3>
-
-<form action="/profile" method=GET>
-    <h1>Cities</h1>
-    <%= query.city_name %> 
-   <!-- <form action="profile"> 
-    <input type="submit" value="Remove from cities">
-   </form> -->
-</form>
+    <% cities.forEach(city => { %>
+        <ul>
+            <li><%= city.name %>, <%= city.state %>
+                <form action="profile?_method=DELETE" method="POST">
+                    <input type="submit" value="Remove">
+                </form>
+            </li> 
+        </ul>
+    <% }); %>

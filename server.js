@@ -50,9 +50,9 @@ app.get('/', (req, res) => {
   res.render('index', { alerts: res.locals.alerts });
 });
 
-app.get('/profile', isLoggedIn, (req, res) => {
-  res.render('profile');
-});
+// app.get('/profile', isLoggedIn, (req, res) => {
+//   res.render('profile');
+// });
 
 app.use('/auth', require('./routes/auth'));
 

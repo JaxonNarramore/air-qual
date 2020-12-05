@@ -1,11 +1,13 @@
-<h2>Air Quality Index: <%= query.data[0].aqi %> </h2>
-<h2>City: <%= query.city_name %> </h2>
-<h2>PM10: <%= query.data[0].pm10 %> µg/m3</h2>
-<h2>PM25: <%= query.data[0].pm25 %> µg/m3</h2>
-<h2>Carbon Monoxide: <%= query.data[0].co %> µg/m3</h2>
-<h2>Sulfur Dioxide: <%= query.data[0].so2 %> µg/m3</h2>
-<h2>Nitrogen Dioxide: <%= query.data[0].no2 %> µg/m3</h2>
+<div id="results">
+<h3>Air Quality Index: <%= query.data[0].aqi %> </h3>
+<h3>City: <%= query.city_name %> </h3>
+<h3>PM10: <%= query.data[0].pm10.toFixed(2) %> µg/m3</h3>
+<h3>PM25: <%= query.data[0].pm25.toFixed(2)  %> µg/m3</h3>
+<h3>Carbon Monoxide: <%= query.data[0].co.toFixed(2)  %> µg/m3</h3>
+<h3>Sulfur Dioxide: <%= query.data[0].so2.toFixed(2)  %> µg/m3</h3>
+<h3>Nitrogen Dioxide: <%= query.data[0].no2.toFixed(2)  %> µg/m3</h3>
 
+<div id="buttonz">
 <form method="POST" action="/profile">
     <input type="hidden" value="<%= query.city_name %>" name="city_name">
     <input type="hidden" value="<%= query.state_code %>" name="state_code">
@@ -15,3 +17,5 @@
 <form action="/" method="GET">
     <input type="submit" value="Back to search">
 </form>
+</div>
+</div>
