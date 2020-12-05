@@ -1,0 +1,7 @@
+<div>Current email: <%= user.email %> </div>
+
+<form action="/update?_method=PUT" method="POST">
+    <label for="updateEmail">New email</label>
+    <input type="text" name="email" id="name" value="<%= user.email %> ">
+    <input type="submit" value="Update">
+</form>

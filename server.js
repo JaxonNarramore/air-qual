@@ -7,8 +7,10 @@ const flash = require('connect-flash');
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const app = express();
 const cookieSession = require('cookie-session');
+const methodOverride = require('method-override')
 
-const isLoggedIn = require('./middleware/isLoggedIn')
+const isLoggedIn = require('./middleware/isLoggedIn');
+const db = require('./models');
 
 app.set('view engine', 'ejs');
 
@@ -17,6 +19,7 @@ app.use(cookieSession({ maxAge: 86400000, keys: [process.env.COOKIE_KEY] }))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
+app.use(methodOverride('_method'))
 
 // secret: what we actually will be giving the user on our site as a session cookie
 // resave: saves the session even if its modified, make this false 
@@ -49,6 +52,22 @@ app.get('/', (req, res) => {
   console.log(res.locals.alerts);
   res.render('index', { alerts: res.locals.alerts });
 });
+
+app.get('/update', isLoggedIn, (req, res) => {
+  res.render('update')
+})
+
+app.put('/update', (req, res) => {
+  console.log('FUCK');
+  db.user.update({
+    email: req.body.email
+  }, {
+    where: { id: req.body.id }
+  }).then(() => {
+    console.log('EMAIL HERE', email);
+    res.redirect('/profile')
+  })
+})
 
 // app.get('/profile', isLoggedIn, (req, res) => {
 //   res.render('profile');

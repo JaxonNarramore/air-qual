@@ -1,10 +1,14 @@
 <h2>Profile Page</h2>
 
 <h3>Welcome to your PROFILE</h3>
+<form action="/update" method="GET">
+    <input type="submit" value="Update email">
+</form>
     <% cities.forEach(city => { %>
         <ul>
-            <li><%= city.name %>, <%= city.state %>
+            <li><a href="/airquality/location?location=<%= city.name %>&state=<%= city.state %>"><%= city.name %>, <%= city.state %></a>
                 <form action="profile?_method=DELETE" method="POST">
+                    <input type="text" hidden name="id" value="<%= city.id %> ">
                     <input type="submit" value="Remove">
                 </form>
             </li> 

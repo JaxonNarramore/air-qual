@@ -46,11 +46,12 @@ airRouter.get('/profile', (req, res) => {
 })
 
 airRouter.delete('/profile', (req, res) => {
-    const { city_name } = req.body;
-    db.cities.findOne({
-        where: { city_name }
+    const { id } = req.body;
+    console.log(id);
+    db.city.findOne({
+        where: { id: id }
     }).then((foundCity) => {
-        foundCity.destory().then(() => {
+        foundCity.destroy().then(() => {
             res.redirect('/profile')
         })
     })
