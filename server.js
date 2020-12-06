@@ -54,24 +54,18 @@ app.get('/', (req, res) => {
 });
 
 app.get('/update', isLoggedIn, (req, res) => {
-  res.render('update')
+  res.render('update', { user: req.user })
 })
 
 app.put('/update', (req, res) => {
-  console.log('FUCK');
   db.user.update({
     email: req.body.email
   }, {
-    where: { id: req.body.id }
+    where: { id: req.user.id }
   }).then(() => {
-    console.log('EMAIL HERE', email);
     res.redirect('/profile')
   })
 })
-
-// app.get('/profile', isLoggedIn, (req, res) => {
-//   res.render('profile');
-// });
 
 app.use('/auth', require('./routes/auth'));
 
@@ -82,5 +76,5 @@ const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
 });
-
+console.log('HI');
 module.exports = server;
