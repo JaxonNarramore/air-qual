@@ -60,6 +60,100 @@ An app that gets real-time air quality information and allows you to log in and 
 
 ![Login page](IMG_0094.jpg)
 
+## The GET route grabbing data from the Weatherbit API in the airquality router
+
+```js
+airRouter.get("/location", (req, res) => {
+  const citystate = req.query.location;
+  const state = req.query.state;
+  axios
+    .get(
+      `https://api.weatherbit.io/v2.0/current/airquality?city=${citystate},${state}&key=${process.env.AIR_API_KEY}`
+    )
+    .then((response) => {
+      const air = response.data;
+      res.render("airquality", { query: air });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+```
+
+## The POST route adding data to the city databse in the profile router
+
+```js
+profileRouter.post("/", (req, res) => {
+  const { city_name } = req.body;
+  const state = req.body.state_code;
+  db.city
+    .create({
+      name: city_name,
+      state: state,
+      userId: req.user.id,
+    })
+    .then(() => {
+      res.redirect("/profile");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+```
+
+## The GET route grabbing data from the city databse in the profile router
+
+```js
+profileRouter.get("/", (req, res) => {
+  db.city
+    .findAll({
+      where: { userId: req.user.id },
+    })
+    .then((city) => {
+      const cities = city.map((item) => {
+        return item.dataValues;
+      });
+      res.render("profile", { cities });
+    });
+});
+```
+
+## The PUT route updating the user email from the user database in the server.js file
+
+```js
+app.put("/update", (req, res) => {
+  db.user
+    .update(
+      {
+        email: req.body.email,
+      },
+      {
+        where: { id: req.user.id },
+      }
+    )
+    .then(() => {
+      res.redirect("/profile");
+    });
+});
+```
+
+## The DELETE route deleting data from the city databse in the profile router
+
+```js
+profileRouter.delete("/", (req, res) => {
+  const { id } = req.body;
+  db.city
+    .findOne({
+      where: { id: id },
+    })
+    .then((foundCity) => {
+      foundCity.destroy().then(() => {
+        res.redirect("/profile");
+      });
+    });
+});
+```
+
 ## Steps To Install On Local Machine
 
 #### 1. Fork and Clone to local machine using

@@ -69,12 +69,14 @@ app.put('/update', (req, res) => {
 
 app.use('/auth', require('./routes/auth'));
 
-app.use('/', require('./routes/airquality'));
+app.use('/airquality', require('./routes/airquality'));
+
+app.use('/profile', require('./routes/profile'))
 
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
 });
-console.log('HI');
+
 module.exports = server;
