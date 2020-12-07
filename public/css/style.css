@@ -194,3 +194,31 @@ span {
   margin-left: 40vw;
   padding: 20px;
 }
+
+#auth-email {
+  background-color: whitesmoke;
+}
+
+#auth-password {
+  background-color: whitesmoke;
+}
+
+#new-email {
+  background-color: whitesmoke;
+}
+
+#new-name {
+  background-color: whitesmoke;
+}
+
+#new-password {
+  background-color: whitesmoke;
+}
+
+#eight {
+  text-align: center;
+  margin-top: 130px;
+  color: blue;
+  font-size: 30px;
+  font-style: oblique;
+}

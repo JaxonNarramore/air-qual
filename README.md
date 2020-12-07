@@ -35,6 +35,8 @@ An app that gets real-time air quality information and allows you to log in and 
 | createdAt   | Date      | Auto-generated                             |
 | updatedAt   | Date      | Auto-generated                             |
 
+![Models](8.png)
+
 ### Routes
 
 | Method | Path                 | Location      | Purpose                   |
@@ -54,12 +56,12 @@ An app that gets real-time air quality information and allows you to log in and 
 
 ## Renderings of pages
 
-![Search page](4.png)
-![Results page](6.png)
+![Signup page](4.png)
+![Login page](6.png)
 ![Search page](3.png)
-![Search page](2.png)
-![Search page](1.png)
-![Search page](5.png)
+![Results page](2.png)
+![Saved cities page](1.png)
+![Update email page](5.png)
 
 ## The GET route grabbing data from the Weatherbit API in the airquality router
 
