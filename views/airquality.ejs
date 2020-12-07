@@ -1,22 +1,24 @@
 <div id="results">
-    <ul>
-        <li>Air Quality Index: <%= query.data[0].aqi %> </li>
-        <li>City: <%= query.city_name %> </li>
-        <li>PM10: <%= query.data[0].pm10.toFixed(2) %> µg/m3</li>
-        <li>PM25: <%= query.data[0].pm25.toFixed(2)  %> µg/m3</li>
-        <li>Carbon Monoxide: <%= query.data[0].co.toFixed(2)  %> µg/m3</li>
-        <li>Sulfur Dioxide: <%= query.data[0].so2.toFixed(2)  %> µg/m3</li>
-        <li>Nitrogen Dioxide: <%= query.data[0].no2.toFixed(2)  %> µg/m3</li>
-    </ul>
+    <div class="wrapper">
+        <ul class="wholeli">
+            <li class="li1"><h2 id="city"><%= query.city_name %></h2></li>
+            <li class="li2">Air Quality Index:<pre> <span><%= query.data[0].aqi %></span></pre></li>
+            <li class="li3">PM10: <pre> <span><%= query.data[0].pm10.toFixed(1) %></span> </pre> µg/m3</li>
+            <li class="li4">PM25: <pre> <span><%= query.data[0].pm25.toFixed(1)  %></span> </pre> µg/m3</li>
+            <li class="li5">Carbon Monoxide: <pre> <span><%= query.data[0].co.toFixed(1)  %></span> </pre> µg/m3</li>
+            <li class="li6">Sulfur Dioxide: <pre> <span><%= query.data[0].so2.toFixed(1)  %></span> </pre> µg/m3</li>
+            <li class="li7">Nitrogen Dioxide: <pre> <span><%= query.data[0].no2.toFixed(1)  %></span> </pre> µg/m3</li>
+        </ul>
+    </div>
     <div id="buttonz">
         <form method="POST" action="/profile">
             <input type="hidden" value="<%= query.city_name %>" name="city_name">
             <input type="hidden" value="<%= query.state_code %>" name="state_code">
-            <button type="submit">Add to your cities</button>
+            <button type="submit" class="btn btn-outline-success" id="add">Add to your cities</button>
         </form>
         
         <form action="/" method="GET">
-            <input type="submit" value="Back to search">
+            <input type="submit" value="Back to search" class="btn btn-outline-primary" id="backtosearch">
         </form>
     </div>
 </div>

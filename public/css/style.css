@@ -17,6 +17,7 @@ h1 {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+  background-color: whitesmoke;
 }
 
 #state {
@@ -24,6 +25,7 @@ h1 {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+  background-color: whitesmoke;
 }
 
 #locationinput {
@@ -31,6 +33,7 @@ h1 {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+  padding-right: 62px;
 }
 
 #login {
@@ -60,6 +63,7 @@ h1 {
 #buttonz {
   display: inline-flex;
   justify-content: center;
+  margin-top: 70px;
 }
 
 #signup {
@@ -68,4 +72,119 @@ h1 {
 
 #signup label {
   display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  padding: 30px;
+  display: flex;
+}
+
+.li1 {
+  left: 0;
+  top: 30px;
+  position: absolute;
+}
+.li2 {
+  position: absolute;
+  left: 0;
+  top: 230px;
+  font-size: 40px;
+}
+.li7 {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  font-size: 40px;
+}
+.li6 {
+  position: absolute;
+  right: 0;
+  top: 515px;
+  font-size: 40px;
+}
+.li5 {
+  position: absolute;
+  right: 0;
+  top: 330px;
+  font-size: 40px;
+}
+.li3 {
+  position: absolute;
+  left: 0;
+  top: 430px;
+  font-size: 40px;
+}
+.li4 {
+  position: absolute;
+  left: 0;
+  top: 600px;
+  font-size: 40px;
+}
+
+#city {
+  font-size: 80px;
+}
+
+#ysc {
+  display: flex;
+  justify-content: center;
+}
+
+#savedcities {
+  display: flex;
+  justify-content: center;
+}
+
+#cities {
+  font-size: 40px;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.update {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+#link {
+  padding-right: 40px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#backtosearch {
+  display: flex;
+  justify-content: center;
+  margin-top: 490px;
+}
+
+#add {
+  position: absolute;
+  top: 95px;
+  left: 470px;
+}
+
+#updatecontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#one label {
+  display: block;
+}
+
+#one {
+  grid-column: 1 / 2;
+}
+
+span {
+  color: rgb(46, 147, 248);
+  font-size: 50px;
 }
