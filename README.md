@@ -52,13 +52,14 @@ An app that gets real-time air quality information and allows you to log in and 
 | GET    | /airquality          | airquality.js | Search page               |
 | GET    | /airquality/location | airquality.js | Results from search       |
 
-## Wireframes
+## Renderings of pages
 
-![Search page](IMG_0095.jpg)
-
-![Signup Page](img.jpg)
-
-![Login page](IMG_0094.jpg)
+![Search page](4.png)
+![Results page](6.png)
+![Search page](3.png)
+![Search page](2.png)
+![Search page](1.png)
+![Search page](5.png)
 
 ## The GET route grabbing data from the Weatherbit API in the airquality router
 
@@ -153,6 +154,14 @@ profileRouter.delete("/", (req, res) => {
     });
 });
 ```
+
+## Wireframes
+
+![Search page](IMG_0095.jpg)
+
+![Signup Page](img.jpg)
+
+![Login page](IMG_0094.jpg)
 
 ## Steps To Install On Local Machine
 

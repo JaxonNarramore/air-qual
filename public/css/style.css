@@ -171,9 +171,9 @@ body {
 }
 
 #updatecontainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
+  margin-left: 40vw;
+  margin-top: 40px;
+  padding: 20px;
 }
 
 #one label {
@@ -187,4 +187,10 @@ body {
 span {
   color: rgb(46, 147, 248);
   font-size: 50px;
+}
+
+#current {
+  margin-top: 150px;
+  margin-left: 40vw;
+  padding: 20px;
 }
