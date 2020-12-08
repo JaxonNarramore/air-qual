@@ -1,13 +1,19 @@
 <div id="results">
     <div class="wrapper">
         <ul class="wholeli">
-            <li class="li1"><h2 id="city"><%= query.city_name %></h2></li>
-            <li class="li2">Air Quality Index:<pre> <span><%= query.data[0].aqi %></span></pre></li>
-            <li class="li3">PM10: <pre> <span><%= query.data[0].pm10.toFixed(1) %></span> </pre> µg/m3</li>
-            <li class="li4">PM25: <pre> <span><%= query.data[0].pm25.toFixed(1)  %></span> </pre> µg/m3</li>
-            <li class="li5">Carbon Monoxide: <pre> <span><%= query.data[0].co.toFixed(1)  %></span> </pre> µg/m3</li>
-            <li class="li6">Sulfur Dioxide: <pre> <span><%= query.data[0].so2.toFixed(1)  %></span> </pre> µg/m3</li>
-            <li class="li7">Nitrogen Dioxide: <pre> <span><%= query.data[0].no2.toFixed(1)  %></span> </pre> µg/m3</li>
+            <li id="li1"><h2 id="city"><%= query.city_name %>, <%= query.state_code %> </h2></li>
+            <li id="li25">Air Quality Index:</li>
+            <li id="li2"><%= query.data[0].aqi %></li>
+            <li id="li35">PM10:</li>
+            <li id="li3"><%= query.data[0].pm10.toFixed(1) %></li>
+            <li id="li45">PM25:</li>
+            <li id="li4"><%= query.data[0].pm25.toFixed(1) %></li>
+            <li id="li55">Carbon Monoxide:</li>
+            <li id="li5"><%= query.data[0].co.toFixed(1) %></li>
+            <li id="li65">Sulfur Dioxide:</li>
+            <li id="li6"><%= query.data[0].so2.toFixed(1) %></li>
+            <li id="li75">Nitrogen Dioxide:</li>
+            <li id="li7"><%= query.data[0].no2.toFixed(1) %></li>
         </ul>
     </div>
     <div id="buttonz">
@@ -17,8 +23,14 @@
             <button type="submit" class="btn btn-outline-success" id="add">Add to your cities</button>
         </form>
         
-        <form action="/" method="GET">
+        <!-- <form action="/" method="GET">
             <input type="submit" value="Back to search" class="btn btn-outline-primary" id="backtosearch">
-        </form>
+        </form> -->
     </div>
 </div>
+<div id="unit1">µg/m3</div>
+<div id="unit2">µg/m3</div>
+<div id="unit3">µg/m3</div>
+<div id="unit4">µg/m3</div>
+<div id="unit5">µg/m3</div>
+<img id="key" src="/key2.png" alt="Key for diffrent air quality levels">
