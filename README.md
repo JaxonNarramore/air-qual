@@ -2,6 +2,10 @@
 
 An app that gets real-time air quality information and allows you to log in and have an account to add cities to your profile to have easier access to see that city's air quality.
 
+## Live site
+
+https://air-qual.herokuapp.com/
+
 ## What it includes
 
 - Sequelize user model / migration
