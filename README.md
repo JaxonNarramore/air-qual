@@ -61,6 +61,8 @@ An application that gets real-time air quality information and allows the user t
 | createdAt   | Date      | Auto-generated                             |
 | updatedAt   | Date      | Auto-generated                             |
 
+### ERD
+
 ![Models](8.png)
 
 ## Renderings of pages
@@ -71,6 +73,14 @@ An application that gets real-time air quality information and allows the user t
 ![Results page](2.png)
 ![Saved cities page](1.png)
 ![Update email page](5.png)
+
+## Wireframes
+
+![Search page](IMG_0095.jpg)
+
+![Signup Page](img.jpg)
+
+![Login page](IMG_0094.jpg)
 
 ## The GET route grabbing data from the Weatherbit API in the airquality router
 
@@ -166,13 +176,6 @@ profileRouter.delete("/", (req, res) => {
 });
 ```
 
-## Wireframes
-
-![Search page](IMG_0095.jpg)
-
-![Signup Page](img.jpg)
-
-![Login page](IMG_0094.jpg)
 
 ## Steps To Install On Local Machine
 
