@@ -1,21 +1,43 @@
 # Air Qual
 
-An app that gets real-time air quality information and allows you to log in and have an account to add cities to your profile to have easier access to see that city's air quality.
+An application that gets real-time air quality information and allows the user to log in, have an account, and add cities to your profile to have easier access to see that city's air quality. I was inspired to build this application after leaning about how much air quality affects the lives of everyone and everything on earth.
 
-## Live site
+## [Live site](https://air-qual.herokuapp.com/)
 
-https://air-qual.herokuapp.com/
+## Features
+- User authintication 
+- Password hashing
+- Search form for cities air quality 
+- Ability to save cities to profile
+- Ability to update email
 
-## What it includes
+## Languages, Frameworks, and Databases
+- Passport
+- Sessions
+- BCrypt
+- Axios
+- Ejs
+- Express
+- Sequelize
+- Postgres
+- SQL
 
-- Sequelize user model / migration
-- Settings for PostgreSQL
-- Passport and passport-local for authentication
-- Sessions to keep user logged in between pages
-- Flash messages for errors and successes
-- Passwords that are hashed with BCrypt
-- EJS Templating and EJS Layouts
-- Cookie sessions for keeping the user logged in
+### Routes
+
+| Method | Path                 | Location      | Purpose                   |
+| ------ | -------------------- | ------------- | ------------------------- |
+| GET    | /                    | server.js     | Home page                 |
+| GET    | /auth/login          | auth.js       | Login form                |
+| GET    | /auth/signup         | auth.js       | Signup form               |
+| POST   | /auth/login          | auth.js       | Login user                |
+| POST   | /auth/signup         | auth.js       | Creates User              |
+| GET    | /auth/logout         | auth.js       | Removes session info      |
+| PUT    | /update              | server.js     | Updates email info        |
+| GET    | /profile             | server.js     | Regular User Profile      |
+| POST   | /profile             | server.js     | Adds city to databse      |
+| DELETE | /profile             | server.js     | Deletes city from databse |
+| GET    | /airquality          | airquality.js | Search page               |
+| GET    | /airquality/location | airquality.js | Results from search       |
 
 ### User Model
 
@@ -40,23 +62,6 @@ https://air-qual.herokuapp.com/
 | updatedAt   | Date      | Auto-generated                             |
 
 ![Models](8.png)
-
-### Routes
-
-| Method | Path                 | Location      | Purpose                   |
-| ------ | -------------------- | ------------- | ------------------------- |
-| GET    | /                    | server.js     | Home page                 |
-| GET    | /auth/login          | auth.js       | Login form                |
-| GET    | /auth/signup         | auth.js       | Signup form               |
-| POST   | /auth/login          | auth.js       | Login user                |
-| POST   | /auth/signup         | auth.js       | Creates User              |
-| GET    | /auth/logout         | auth.js       | Removes session info      |
-| PUT    | /update              | server.js     | Updates email info        |
-| GET    | /profile             | server.js     | Regular User Profile      |
-| POST   | /profile             | server.js     | Adds city to databse      |
-| DELETE | /profile             | server.js     | Deletes city from databse |
-| GET    | /airquality          | airquality.js | Search page               |
-| GET    | /airquality/location | airquality.js | Results from search       |
 
 ## Renderings of pages
 
