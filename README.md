@@ -65,23 +65,6 @@ An application that gets real-time air quality information and allows the user t
 
 ![Models](8.png)
 
-## Renderings of pages
-
-![Signup page](4.png)
-![Login page](6.png)
-![Search page](3.png)
-![Results page](2.png)
-![Saved cities page](1.png)
-![Update email page](5.png)
-
-## Wireframes
-
-![Search page](IMG_0095.jpg)
-
-![Signup Page](img.jpg)
-
-![Login page](IMG_0094.jpg)
-
 ## The GET route grabbing data from the Weatherbit API in the airquality router
 
 ```js
@@ -213,6 +196,24 @@ or
 ```
 node index.js
 ```
+
+## Renderings of pages
+
+![Signup page](4.png)
+![Login page](6.png)
+![Search page](3.png)
+![Results page](2.png)
+![Saved cities page](1.png)
+![Update email page](5.png)
+
+## Wireframes
+
+![Search page](IMG_0095.jpg)
+
+![Signup Page](img.jpg)
+
+![Login page](IMG_0094.jpg)
+
 
 ## Contact with the creator
 
